@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Ngampus | {{ $title }} </title>
+    <title>Ngampus</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -43,6 +43,7 @@
     <div class="container mt-5 pt-5">
         @yield('content')
     </div>
+    
 
     @include('partials.footer')
 
