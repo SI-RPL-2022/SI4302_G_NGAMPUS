@@ -8,12 +8,12 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-            <li><a class="nav-link" href="/">Beranda</a></li>
-            <li><a class="nav-link" href="/about">Produk Kami</a></li>
-            <li><a class="nav-link" href="/artikel">Artikel</a></li>
-            <li><a class="nav-link" href="/portfolio">Portfolio</a></li>
-            <li><a class="nav-link" href="/team">Team</a></li>
-            <li><a class="nav-link" href="/contact">Contact</a></li>
+            <li><a class="nav-link scrollto {{ ($title === "home" ? 'active' : '') }}" href="/">Beranda</a></li>
+            <li><a class="nav-link scrollto {{ ($title === "about" ? 'active' : '') }}" href="/about">Produk Kami</a></li>
+            <li><a class="nav-link scrollto {{ ($title === "artikel" ? 'active' : '') }}" href="/artikel">Artikel</a></li>
+            <li><a class="nav-link scrollto {{ ($title === "portofolio" ? 'active' : '') }}" href="/portfolio">Portfolio</a></li>
+            <li><a class="nav-link scrollto {{ ($title === "team" ? 'active' : '') }}" href="/team">Team</a></li>
+            <li><a class="nav-link scrollto {{ ($title === "contact" ? 'active' : '') }}" href="/contact">Contact</a></li>
             <li><a class="getstarted scrollto" href="/">Login</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
