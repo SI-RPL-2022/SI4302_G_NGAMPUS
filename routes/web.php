@@ -61,6 +61,16 @@ Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
 
+//detailproduk
+Route::get('/detailproduk', function () {
+    return view('produk.detailproduk');
+});
+
+//produk
+Route::get('/produk', function () {
+    return view('produk.index');
+});
+
 //product
 Route::get('/admin/produk', 'ProductController@productAdmin');
 Route::get('/admin/produk/{id}', 'PegawaiController@destroy');
