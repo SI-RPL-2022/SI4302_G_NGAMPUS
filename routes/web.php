@@ -7,6 +7,9 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\HomeController;
+
+use App\Http\Controllers\ViewDataController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,15 +29,24 @@ Route::get('/admin/produk/{product}/edit', [ProductController::class, 'edit']);
 Route::post('/admin/produk/{product}', [ProductController::class, 'update']);
 Route::post('/admin/produk/{product}/delete', [ProductController::class, 'destroy']);
 
-//product
-// Route::get('/admin/produk', 'ProductController@productAdmin');
+//produk user
+Route::get('/', [ViewDataController::class, 'index']);
+Route::get('/produk', [ViewDataController::class, 'indexProduct']);
+Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
 
+//testimoni produk
+Route::get('/admin/testimoni/produk', [ViewDataController::class, 'testimoniIndex']);
+Route::get('/admin/testimoni/produk/show/{id}', [ViewDataController::class, 'testimoniShow']);
+Route::get('/admin/testimoni/produk/hide/{id}', [ViewDataController::class, 'testimoniHide']);
+Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
 
+//home
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
     ]);
 });
+
 
 Route::get('/tentang', function () {
     return view('tentang', [
@@ -66,6 +78,12 @@ Route::get('/kontak', function () {
     ]);
 });
 
+//master produk
+Route::get('/admin/masterproduk', function () {
+    return view('masterproduk.index', [
+        "title" => 'masterproduk',
+    ]);
+});
 
 
 //auth login register

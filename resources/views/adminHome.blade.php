@@ -1,4 +1,7 @@
 @extends('layouts.admin')
+@section ('home')
+actived
+@endsection
 @section('konten')
 <br><br><br>
 <div class="container">

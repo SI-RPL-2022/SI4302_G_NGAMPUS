@@ -265,6 +265,16 @@ h6 {
     color: white;
 }
 
+.btn-sukses {
+    background-color: #53D258;
+    color: white;
+}
+
+.btn-sukses:hover {
+    background-color: #338135;
+    color: white;
+}
+
 .btn-submit {
     background-color: #00B5BF;
     color: white;

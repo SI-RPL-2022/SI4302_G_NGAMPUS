@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 
+@section ('produk')
+actived
+@endsection
 @section ('manajemenproduk')
 actived
 @endsection

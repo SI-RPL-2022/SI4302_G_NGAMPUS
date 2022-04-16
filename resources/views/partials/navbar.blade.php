@@ -9,11 +9,21 @@
         <nav id="navbar" class="navbar">
             <ul>
 
-            <li><a class="nav-link " href="/">Beranda</a></li>
-            <li><a class="nav-link " href="/produk">Produk Kami</a></li>
-            <li><a class="nav-link " href="/artikel">Artikel</a></li>
-            <li><a class="nav-link " href="/team">Team</a></li>
-            <li><a class="nav-link " href="/about">Tentang</a></li>
+            <li>
+                <a class="nav-link @yield('beranda')" href="/">Beranda</a>
+            </li>
+            <li>
+                <a class="nav-link @yield('produk')" href="/produk">Produk Kami</a>
+            </li>
+            <li>
+                <a class="nav-link @yield('artikel')" href="/artikel">Artikel</a>
+            </li>
+            <li>
+                <a class="nav-link @yield('team')" href="/team">Team</a>
+            </li>
+            <li>
+                <a class="nav-link @yield('about')" href="/about">Tentang</a>
+            </li>
 
             @guest
                 <li>

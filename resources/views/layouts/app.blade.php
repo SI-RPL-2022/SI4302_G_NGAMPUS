@@ -28,6 +28,8 @@
     <!-- Template Main CSS File -->
     <link href="{{asset('Template/css/style.css')}}" rel="stylesheet">
     
+    <link href="{{asset('Template/css/style-extend.css')}}" rel="stylesheet">
+    
 
     <!-- =======================================================
     * Template Name: Ninestars - v4.7.0
@@ -37,14 +39,14 @@
     ======================================================== -->
     </head>
 
-    <body>
-    @include('partials.navbar') 
-    
-    <div class="container mt-5 pt-5">
-        @yield('content')
-    </div>
-
-    @include('partials.footer')
+    <body>   
+        @include('partials.navbar') 
+        <section class="bg">
+            <div class="container mt-5 pt-5">
+                @yield('content')
+            </div>
+        </section>
+        @include('partials.footer')
 
 <!-- Vendor JS Files -->
   <script src="{{asset('Template/vendor/purecounter/purecounter.js')}}"></script>

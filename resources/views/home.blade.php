@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('beranda')
+active
+@endsection
 @section('content')
-    <h1>HALAMAN HOME</h1> 
+
+
 @endsection

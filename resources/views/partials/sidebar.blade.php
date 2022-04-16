@@ -1,7 +1,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
-        <a href="/admin" class="logo d-flex align-items-center">
+        <a href="/admin/home" class="logo d-flex align-items-center">
             <span class="d-none d-lg-block">Ngampus</span>
         </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -99,8 +99,8 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{asset('Admin/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2"></span>
+                        <img src="{{asset('Admin/img/profile.jpg')}}" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
                     </a>
                     <!-- End Profile Iamge Icon -->
 
@@ -139,7 +139,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link @yield('home')" href="">
+                <a class="nav-link @yield('home')" href="/admin/home">
                     <i class="bi bi-grid"></i>
                     <span>Beranda</span>
                 </a>
@@ -156,6 +156,8 @@
             </li>
             <!-- End Profile Page Nav -->
 
+
+            
             <li class="nav-item ">
                 <a class="nav-link @yield('manajemenproduk')" href="/admin/produk">
                     <i class="bi bi-journal-text"></i>
@@ -187,6 +189,15 @@
                 </a>
             </li>
             <!-- End Login Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link @yield('testimoniproduk')" href="/admin/testimoni/produk">
+                    <i class="bi bi-chat-square-dots"></i>
+                    <span>Testimoni Produk</span>
+                </a>
+            </li>
+            <!-- End Login Page Nav -->
+
         </ul>
     </aside>
 <!-- End Sidebar-->

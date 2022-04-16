@@ -17,6 +17,13 @@ class ProductSeeder extends Seeder
         $product = [
             // webinar
             [
+                'namaproduct' => 'Researchers Tips to Publications',
+                'jenisproduct' => 'Webinar',
+                'tanggal' => '2020-08-14',
+                'desc' => 'Free Webinar bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
+                'picture' => 'w1.jpg',
+            ],
+            [
                 'namaproduct' => 'Ultrasound for Emergency Care in New Normal Era',
                 'jenisproduct' => 'Webinar',
                 'tanggal' => '2020-08-14',
@@ -24,7 +31,7 @@ class ProductSeeder extends Seeder
                 'picture' => 'w1.jpg',
             ],
             [
-                'namaproduct' => 'Masyarakat Well-Educated untuk Indonesia Maju',
+                'namaproduct' => 'Masyarakat Well-Educated untuk Indonesia',
                 'jenisproduct' => 'Webinar',
                 'tanggal' => '2020-08-27',
                 'desc' => 'Webinar Series bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
@@ -38,7 +45,7 @@ class ProductSeeder extends Seeder
                 'picture' => 'w3.jpg',
             ],
             [
-                'namaproduct' => 'Becoming Indonesian Young Heroes In Digital Era',
+                'namaproduct' => 'Becoming Indonesian Young Heroes',
                 'jenisproduct' => 'Webinar',
                 'tanggal' => '2020-12-18',
                 'desc' => 'Webinar bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
@@ -54,6 +61,13 @@ class ProductSeeder extends Seeder
 
             // kepo jurusan
             [
+                'namaproduct' => 'Hukum',
+                'jenisproduct' => 'Kepo Jurusan',
+                'tanggal' => '2020-06-12',
+                'desc' => 'Kepo Jurusan bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
+                'picture' => 'kj0.jpg',
+            ],
+            [
                 'namaproduct' => 'Kimia',
                 'jenisproduct' => 'Kepo Jurusan',
                 'tanggal' => '2020-07-18',
@@ -61,17 +75,17 @@ class ProductSeeder extends Seeder
                 'picture' => 'kj1.jpg',
             ],
             [
-                'namaproduct' => 'Ilmu Komputer',
-                'jenisproduct' => 'Kepo Jurusan',
-                'tanggal' => '2021-06-23',
-                'desc' => 'Kepo Jurusan bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
-                'picture' => 'kj2.jpg',
-            ],
-            [
                 'namaproduct' => 'Psikologi',
                 'jenisproduct' => 'Kepo Jurusan',
                 'tanggal' => '2020-12-05',
                 'desc' => 'Kepo Jurusan Salah Jurusan Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
+                'picture' => 'kj2.jpg',
+            ],
+            [
+                'namaproduct' => 'Ilmu Komputer',
+                'jenisproduct' => 'Kepo Jurusan',
+                'tanggal' => '2021-06-23',
+                'desc' => 'Kepo Jurusan bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
                 'picture' => 'kj3.jpg',
             ],
             [
@@ -90,6 +104,13 @@ class ProductSeeder extends Seeder
             ],
 
             // Major Experience
+            [
+                'namaproduct' => 'Membuat Virtual Tour',
+                'jenisproduct' => 'Major Experience',
+                'tanggal' => '2020-04-25',
+                'desc' => 'Major Experience bersama Dr. Bobi Prabowo, Sp.Em sebagai Ultrasound for Triage Covid-19 Patieints in Emergency Department dan Dr. Jollis, Sp.Em sebagai Hemodynamic Monitoring with ulrasound for emergency cases in new norml era. Acara ini disupport oleh airindo dan diselenggarakan oleh sonoSite FujiFilm.',
+                'picture' => 'me0.jpg',
+            ],
             [
                 'namaproduct' => 'Teknik Dasar AutoCAD',
                 'jenisproduct' => 'Major Experience',

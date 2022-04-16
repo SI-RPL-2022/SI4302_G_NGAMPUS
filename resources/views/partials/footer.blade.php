@@ -35,8 +35,8 @@
         <div class="col-lg-2 col-md-6 footer-links">
             <h4>Tentang</h4>
             <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Produk Kami</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/">Beranda</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/produk">Produk Kami</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang Kami</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak Kami</a></li>
             </ul>
@@ -45,9 +45,9 @@
         <div class="col-lg-2 col-md-6 footer-links">
             <h4>Produk Kami</h4>
             <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Kepo Jurusan</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Major Experience</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Ngampus Webinar</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/produk/detail/Kepo%20Jurusan">Kepo Jurusan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/produk/detail/Major%20Experience">Major Experience</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/produk/detail/Webinar">Ngampus Webinar</a></li>
             </ul>
         </div>
 
