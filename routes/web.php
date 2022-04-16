@@ -26,6 +26,10 @@ Route::get('/admin/produk/{product}/edit', [ProductController::class, 'edit']);
 Route::post('/admin/produk/{product}', [ProductController::class, 'update']);
 Route::post('/admin/produk/{product}/delete', [ProductController::class, 'destroy']);
 
+//product
+// Route::get('/admin/produk', 'ProductController@productAdmin');
+
+
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
@@ -62,10 +66,7 @@ Route::get('/kontak', function () {
     ]);
 });
 
-// Admin
-Route::get('/admin/produk', function () {
-    return view('adminproduk.index');
-});
+
 
 //auth login register
 Auth::routes();
