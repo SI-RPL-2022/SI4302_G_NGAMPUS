@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@foreach ($data_ as $item)
+@foreach ($data_jurusan as $item)
 <div class="card" style="border-radius: 25px">
     <div class="card-body">
         <div class="container">
