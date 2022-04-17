@@ -22,7 +22,6 @@ class ViewDataController extends Controller
         $product = Product::where('jenisproduct', $id)->paginate(6);
         $testimoniproduk = TestimoniProduk::where('jenisproduct', $id)->paginate(6);
         $jenisproduct = $id;
-
         return view('produk.detailproduk', compact('product', 'jenisproduct', 'testimoniproduk'));
     }
 

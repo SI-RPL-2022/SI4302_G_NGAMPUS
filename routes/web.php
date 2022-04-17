@@ -2,13 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ProductController;
-
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\ProductController;
+
 use App\Http\Controllers\ViewDataController;
+
+use App\Http\Controllers\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +42,12 @@ Route::get('/admin/testimoni/produk/show/{id}', [ViewDataController::class, 'tes
 Route::get('/admin/testimoni/produk/hide/{id}', [ViewDataController::class, 'testimoniHide']);
 Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
 
+//artikel info kampus
+route::get('/artikel', [ArtikelController::class, 'index']);
+route::get('/artikel/direktori/kampus/{id}', [ArtikelController::class, 'indexKampus'])->name('kampus');
+
+route::get('/artikel/direktori/jurusan/{id}', [ArtikelController::class, 'indexJurusan'])->name('jurusan');
+
 //home
 Route::get('/', function () {
     return view('home', [
@@ -54,11 +62,6 @@ Route::get('/tentang', function () {
     ]);
 });
 
-Route::get('/artikel', function () {
-    return view('artikel', [
-        "title" => 'artikel',
-    ]);
-});
 
 Route::get('/produk', function () {
     return view('produk.index', [
@@ -84,6 +87,16 @@ Route::get('/admin/masterproduk', function () {
         "title" => 'masterproduk',
     ]);
 });
+
+//Produk Kami
+Route::get('/detailproduk', function () {
+    return view('produk.detailproduk', [
+        "title" => 'contact',
+    ]);
+});
+
+
+
 
 
 //auth login register

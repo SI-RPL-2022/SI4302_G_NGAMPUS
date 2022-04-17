@@ -27,16 +27,12 @@
 
     <!-- Template Main CSS File -->
     <link href="{{asset('Template/css/style.css')}}" rel="stylesheet">
-    
     <link href="{{asset('Template/css/style-extend.css')}}" rel="stylesheet">
     
 
-    <!-- =======================================================
-    * Template Name: Ninestars - v4.7.0
-    * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    <link href="{{asset('Template/css/style-extend.css')}}" rel="stylesheet">
+    
+
     </head>
 
     <body>   
@@ -49,14 +45,17 @@
         @include('partials.footer')
 
 <!-- Vendor JS Files -->
-  <script src="{{asset('Template/vendor/purecounter/purecounter.js')}}"></script>
-  <script src="{{asset('Template/vendor/aos/aos.js')}}"></script>
-  <script src="{{asset('Template/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('Template/vendor/glightbox/js/glightbox.min.js')}}"></script>
-  <script src="{{asset('Template/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('Template/vendor/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('Template/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{asset('Template/vendor/purecounter/purecounter.js')}}"></script>
+    <script src="{{asset('Template/vendor/aos/aos.js')}}"></script>
+    <script src="{{asset('Template/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('Template/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{asset('Template/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('Template/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('Template/vendor/php-email-form/validate.js')}}"></script>
 
 
-  <!-- Template Main JS File -->
-  <script src="{{asset('Template/js/main.js')}}"></script>
+<!-- Template Main JS File -->
+    <script src="{{asset('Template/js/main.js')}}"></script>
+
+    </body>
+
