@@ -35,6 +35,12 @@ Route::post('/admin/produk/{product}/delete', [ProductController::class, 'destro
 Route::get('/', [ViewDataController::class, 'index']);
 Route::get('/produk', [ViewDataController::class, 'indexProduct']);
 Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
+//registrasi produk
+Route::get('/registrasi', function () {
+    return view('produk.formregistrasi', [
+        "title" => 'registrasi',
+    ]);
+});
 
 //testimoni produk
 Route::get('/admin/testimoni/produk', [ViewDataController::class, 'testimoniIndex']);
