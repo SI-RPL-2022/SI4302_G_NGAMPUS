@@ -24,6 +24,16 @@ class User extends Authenticatable
         'password',
         'is_admin',
         'picture',
+        'birthIn',
+        'birthDate',
+        'kota',
+        'provinsi',
+        'Negara',
+        'pekerjaan',
+        'asalSekolah',
+        'kelas',
+        'jurusan',
+        'desc',
     ];
 
     /**

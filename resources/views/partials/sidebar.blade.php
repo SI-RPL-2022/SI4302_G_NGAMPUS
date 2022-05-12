@@ -99,7 +99,7 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{asset('Admin/img/profile.jpg')}}" alt="Profile" class="rounded-circle">
+                        <img src="{{asset('Admin/img/profile-admin.jpg')}}" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
                     </a>
                     <!-- End Profile Iamge Icon -->
@@ -149,7 +149,7 @@
             <!-- <li class="nav-heading">Pages</li> -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('manajemenuser')" href="">
+                <a class="nav-link @yield('manajemenuser')" href="/admin/user">
                     <i class="bi bi-people"></i>
                     <span>Manajemen Akun</span>
                 </a>

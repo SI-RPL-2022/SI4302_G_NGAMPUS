@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\ProductController;
 
 use App\Http\Controllers\ViewDataController;
@@ -22,6 +24,14 @@ use App\Http\Controllers\ArtikelController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//manajemen user controller
+Route::get('/admin/user', [UserController::class, 'userAdmin']);
+Route::get('/admin/user/tambah', [UserController::class, 'create']);
+Route::post('/admin/user', [UserController::class, 'store']);
+Route::get('/admin/user/{user}/detail', [UserController::class, 'detail']);
+Route::post('/admin/user/{user}', [UserController::class, 'update']);
+Route::post('/admin/user/{user}/delete', [UserController::class, 'destroy']);
 
 //product controller
 Route::get('/admin/produk', [ProductController::class, 'productAdmin']);
