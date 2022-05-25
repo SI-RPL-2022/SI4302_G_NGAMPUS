@@ -175,7 +175,7 @@
             <!-- End Register Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('jurusan')" href="">
+                <a class="nav-link @yield('jurusan')" href="/admin/jurusan">
                     <i class="bi bi-book"></i>
                     <span>Jurusan</span>
                 </a>

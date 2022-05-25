@@ -8,6 +8,8 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\UserController;
 
+use App\Http\Controllers\JurusanController;
+
 use App\Http\Controllers\ProductController;
 
 use App\Http\Controllers\ViewDataController;
@@ -32,6 +34,14 @@ Route::post('/admin/user', [UserController::class, 'store']);
 Route::get('/admin/user/{user}/detail', [UserController::class, 'detail']);
 Route::post('/admin/user/{user}', [UserController::class, 'update']);
 Route::post('/admin/user/{user}/delete', [UserController::class, 'destroy']);
+
+//manajemen jurusan controller
+Route::get('/admin/jurusan', [JurusanController::class, 'jurusanAdmin']);
+Route::get('/admin/jurusan/tambah', [JurusanController::class, 'create']);
+Route::post('/admin/jurusan', [JurusanController::class, 'store']);
+Route::get('/admin/jurusan/{jurusan}/edit', [JurusanController::class, 'edit']);
+Route::post('/admin/jurusan/{jurusan}', [JurusanController::class, 'update']);
+Route::post('/admin/jurusan/{jurusan}/delete', [JurusanController::class, 'destroy']);
 
 //product controller
 Route::get('/admin/produk', [ProductController::class, 'productAdmin']);
