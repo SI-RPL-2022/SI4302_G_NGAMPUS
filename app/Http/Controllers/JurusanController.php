@@ -3,39 +3,67 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\jurusan;
+use App\Models\Product;
 
 class JurusanController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('is_admin');
-    }
-    public function jurusanAdmin()
-    {
-        $search = request()->query('search');
-        if ($search){
-            $jurusan = Jurusan::where('name', 'like', "%{$search}%")->paginate(5);
 
-        }
-        else{
-            $jurusan = Jurusan::paginate(5);
-        }
+    // public function __construct()
+    // {
+    //     $this->middleware('is_admin');
+    // }
+    
+    public function create()
+    {
+        return view('adminjurusan.create');
 
-        return view('adminjurusan.index', compact('jurusan'));
     }
 
-
-    public function detail($id)
+    public function store(Request $request)
     {
-        $jurusan = Jurusan::find($id);
-        return view('adminjurusan.detail', compact('jurusan'));
-    }
+        $request->validate([
+            'picture' =>  'required|image|mimes:jpeg,png,jpg,svg',
+        ]);
+        $pictureName = time() . '.' . $request->picture->extension();
+        $request->picture->move(public_path('/Admin/img'), $pictureName);
 
+        $Jurusan = Jurusan::create([
+            'namajurusan' => $request['namajurusan'],
+            'detailjurusan' => $request['detailjurusan'],
+            'alasanmemilihjurusan' => $request['alasanmemilihjurusan'],
+            'prospekkerja' => $request['prospekkerja'],
+            'testimoni' => $request['testimoni'],
+            'picture' => $pictureName,
+        ]);
+        return redirect('admin/jurusan');
+    }
+    public function edit($id)
+    {
+        $jurusan = jurusan::find($id);
+        return view('adminjurusan.edit', compact('jurusan'));
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'picture' =>  'required|image|mimes:jpeg,png,jpg,svg',
+        ]);
+        $pictureName = time() . '.' . $request->picture->extension();
+        $request->picture->move(public_path('/Admin/img'), $pictureName);
+        $Jurusan = Jurusan::find($id);
+
+        $Jurusan->namajurusna = $request->namajurusan;
+        $Jurusan->detailjurusan = $request->detailjurusan;
+        $Jurusan->alasanmemilihjurusan = $request->alasanmemilihjurusan;
+        $Jurusan->prospekkerja = $request->prospekkerja;
+        $Jurusan->testimoni = $request->testimoni;
+        $Jurusan->picture = $pictureName;
+        $Jurusan->save();
+        return redirect('/admin/jurusan');
+    }
     public function destroy($id)
     {
-        $jurusan = Jurusan::find($id);
-        $jurusan->delete();
+        $Jurusan = Jurusan::find($id);
+        $Jurusan->delete();
         return redirect('/admin/jurusan');
     }
 }
