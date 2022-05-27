@@ -29,30 +29,60 @@ collapsed
         @csrf
     <div class="mb-3">
         <label for="exampleInputText" class="form-label">Nama Jurusan</label>
-        <input type="text" class="form-control" name="namajurusan" required>
+        <input type="text" class="form-control" name="nama_jurusan" required>
     </div>
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Detail Jurusan</label>
-        <input type="text" class="form-control" name="detailjurusan" required>
+        <label for="exampleInputText" class="form-label">Deskripsi Jurusan</label>
+        <input type="text" class="form-control" name="desc_jurusan" required>
     </div>
     <div class="mb-3">
         <label for="exampleInputText" class="form-label">Alasan Memilih Jurusan</label>
-        <input type="text" class="form-control" name="alasanmemilihjurusan" required>
+        <input type="text" class="form-control" name="alasan1" required>
     </div>
     
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Prospek Kerja</label>
-        <textarea type="text" class="form-control" name="prospekkerja" required></textarea>
+        <label for="exampleInputText" class="form-label">Alasan Memilih Jurusan</label>
+        <input type="text" class="form-control" name="alasan2" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Testimoni</label>
-        <input type="text" class="form-control" name="testimoni" required>
+        <label for="exampleInputFile" class="form-label">Alasan Memilih Jurusan</label>
+        <input type="text" class="form-control" name="alasan3" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Picture</label>
-        <input type="file" class="form-control" name="picture" required>
+        <label for="exampleInputFile" class="form-label">Alasan Memilih Jurusan</label>
+        <input type="text" class="form-control" name="alasan4" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputFile" class="form-label">Alasan Memilih Jurusan</label>
+        <input type="text" class="form-control" name="prospek1" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <input type="text" class="form-control" name="prospek2" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <input type="text" class="form-control" name="prospek3" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <input type="text" class="form-control" name="prospek4" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <input type="text" class="form-control" name="prospek5" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <input type="text" class="form-control" name="prospek6" required>
     </div>
     
     <br>

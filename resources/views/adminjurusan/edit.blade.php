@@ -30,34 +30,63 @@ collapsed
 
     <div class="mb-3">
         <label for="exampleInputText" class="form-label"><strong>Nama Jurusan</strong></label>
-        <input value="{{ $jurusan->namajurusan }}" type="text" class="form-control" name="namajurusan" required>
+        <input value="{{ $jurusan->nama_jurusan }}" type="text" class="form-control" name="nama_jurusan" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label"><strong>Detail Jurusan</strong></label>
-        <input value="{{ $jurusan->detailjurusan }}" type="text" class="form-control" name="detailjurusan" required>
+        <label for="exampleInputText" class="form-label"><strong>Deskripsi Jurusan</strong></label>
+        <input value="{{ $jurusan->desc_jurusan }}" type="text" class="form-control" name="desc_jurusan" required>
     </div>
 
     <div class="mb-3">
         <label for="exampleInputText" class="form-label"><strong>Alasan Memilih Jurusan</strong></label>
-        <input value="{{ $jurusan->alasanmemilihjurusan }}" type="text" class="form-control" name="alasanmemilihjurusan" required>
+        <input value="{{ $jurusan->alasan1 }}" type="text" class="form-control" name="alasan1" required>
     </div>
     
     <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Alasan Memilih Jurusan</strong></label>
+        <input value="{{ $jurusan->alasan2 }}" type="text" class="form-control" name="alasan2" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Alasan Memilih Jurusan</strong></label>
+        <input value="{{ $jurusan->alasan3 }}" type="text" class="form-control" name="alasan3" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Alasan Memilih Jurusan</strong></label>
+        <input value="{{ $jurusan->alasan4 }}" type="text" class="form-control" name="alasan4" required>
+    </div>
+
+    <div class="mb-3">
         <label for="exampleInputText" class="form-label"><strong>Prospek Kerja</strong></label>
-        <textarea type="text" class="form-control" name="prospekkerja" required><?php echo $jurusan['prospekkerja'] ?></textarea>
+        <input value="{{ $jurusan->prospek1 }}" type="text" class="form-control" name="prospek1" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label"><strong>Testimoni</strong></label>
-        <input value="{{ $jurusan->testimoni }}" type="text" class="form-control" name="testimoni" required>
+        <label for="exampleInputText" class="form-label"><strong>Prospek Kerja</strong></label>
+        <input value="{{ $jurusan->prospek2 }}" type="text" class="form-control" name="prospek2" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Picture</label>
-        <input type="file" class="form-control" name="picture" required>
+        <label for="exampleInputText" class="form-label"><strong>Prospek Kerja</strong></label>
+        <input value="{{ $jurusan->prospek3 }}" type="text" class="form-control" name="prospek3" required>
     </div>
 
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Prospek Kerja</strong></label>
+        <input value="{{ $jurusan->prospek4 }}" type="text" class="form-control" name="prospek4" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Prospek Kerja</strong></label>
+        <input value="{{ $jurusan->prospek5 }}" type="text" class="form-control" name="prospek5" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Prospek Kerja</strong></label>
+        <input value="{{ $jurusan->prospek6 }}" type="text" class="form-control" name="prospek6" required>
+    </div>
        
     <br>
     <div class="mb-3" style="float:right;">

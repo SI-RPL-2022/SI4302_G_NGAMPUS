@@ -34,12 +34,19 @@ class JurusanController extends Controller
         $request->picture->move(public_path('/Admin/img'), $pictureName);
 
         $Jurusan = Jurusan::create([
-            'namajurusan' => $request['namajurusan'],
-            'detailjurusan' => $request['detailjurusan'],
-            'alasanmemilihjurusan' => $request['alasanmemilihjurusan'],
-            'prospekkerja' => $request['prospekkerja'],
-            'testimoni' => $request['testimoni'],
-            'picture' => $pictureName,
+            'nama_jurusan' => $request['nama_jurusan'],
+            'desc_jurusan' => $request['desc_jurusan'],
+            'alasan1' => $request['alasan1'],
+            'alasan2' => $request['alasan2'],
+            'alasan3' => $request['alasan3'],
+            'alasan4' => $request['alasan4'],
+            'prospek1' => $request['prospek1'],
+            'prospek2' => $request['prospek2'],
+            'prospek3' => $request['prospek3'],
+            'prospek4' => $request['prospek4'],
+            'prospek5' => $request['prospek5'],
+            'prospek6' => $request['prospek6'],
+            
         ]);
         return redirect('admin/jurusan');
     }
@@ -57,12 +64,18 @@ class JurusanController extends Controller
         $request->picture->move(public_path('/Admin/img'), $pictureName);
         $Jurusan = Jurusan::find($id);
 
-        $Jurusan->namajurusna = $request->namajurusan;
-        $Jurusan->detailjurusan = $request->detailjurusan;
-        $Jurusan->alasanmemilihjurusan = $request->alasanmemilihjurusan;
-        $Jurusan->prospekkerja = $request->prospekkerja;
-        $Jurusan->testimoni = $request->testimoni;
-        $Jurusan->picture = $pictureName;
+        $Jurusan->nama_jurusan = $request->namajurusan;
+        $Jurusan->desc_jurusan = $request->desc_jurusan;
+        $Jurusan->alasan1 = $request->alasan1;
+        $Jurusan->alasan2 = $request->alasan2;
+        $Jurusan->alasan3 = $request->alasan3;
+        $Jurusan->alasan4 = $request->alasan4;
+        $Jurusan->prospek1 = $request->prospek1;
+        $Jurusan->prospek2 = $request->prospek2;
+        $Jurusan->prospek3 = $request->prospek3;
+        $Jurusan->prospek4 = $request->prospek4;
+        $Jurusan->prospek5 = $request->prospek5;
+        $Jurusan->prospek6 = $request->prospek6;
         $Jurusan->save();
         return redirect('/admin/jurusan');
     }

@@ -43,10 +43,17 @@ actived
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Nama Jurusan</th>
-                                <th scope="col">Detail Jurusan</th>
+                                <th scope="col">Deskripsi Jurusan</th>
+                                <th scope="col">Alasan Memilih Jurusan</th>
+                                <th scope="col">Alasan Memilih Jurusan</th>
+                                <th scope="col">Alasan Memilih Jurusan</th>
                                 <th scope="col">Alasan Memilih Jurusan</th>
                                 <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Testimoni</th>
+                                <th scope="col">Prospek Kerja</th>
+                                <th scope="col">Prospek Kerja</th>
+                                <th scope="col">Prospek Kerja</th>
+                                <th scope="col">Prospek Kerja</th>
+                                <th scope="col">Prospek Kerja</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
