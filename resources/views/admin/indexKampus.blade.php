@@ -61,8 +61,11 @@ actived
                                                             <td class="crop-text-4 text-justify my-auto py-1">{{ $item->desc_kampus }}</td>
                                                             <td>
                                                                 <div class="d-flex flex-row bd-highlight">
-                                                                    <a href="/admin/kampus/{{ $item->id }}/detail"
-                                                                        class="btn btn-detail rounded-pill">Lihat</a>
+                                                                    <a href="{{route('kampus',[$item->id])}}"
+                                                                        class="btn btn-detail bg-success rounded-pill ms-2">Lihat</a>
+                                                                <div class="d-flex flex-row bd-highlight">
+                                                                    <a href="/admin/kampus/{{ $item->id }}/edit"
+                                                                        class="btn btn-detail rounded-pill ms-2">Edit</a>
                                                                     <form
                                                                         action="/admin/kampus/{{ $item->id }}/delete"
                                                                         method="POST">

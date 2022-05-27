@@ -29,7 +29,9 @@ use App\Http\Controllers\AdminController;
 Route::get('/admin/kampus', [AdminController::class, 'indexKampus'])->name('admin.kampus.index');
 Route::get('/admin/kampus/create', [AdminController::class, 'createKampus'])->name('admin.kampus.create');
 Route::post('/admin/kampus/store', [AdminController::class, 'storeKampus'])->name('admin.kampus.store');
+Route::post('/admin/kampus/{id}/update', [AdminController::class, 'updateKampus'])->name('admin.kampus.update');
 Route::post('/admin/kampus/{id}/delete', [AdminController::class, 'destroyKampus'])->name('admin.kampus.delete');
+Route::get('/admin/kampus/{id}/edit', [AdminController::class, 'editKampus'])->name('admin.kampus.edit');
 
 
 //product controller
