@@ -25,7 +25,8 @@ actived
                 <div class="card">
                     <div class="card-header pt-3">
                     <p class="fw-bolder mt-2" style="float:left; font-size:15px;">List Jurusan</p>
-
+                    <a href="/admin/jurusan/tambah" style="font-size:13px; float:right;" class=" rounded-pill btn-secondary btn">
+                    <i class="bi bi-plus-square me-1 "></i> Tambah Jurusan</button></a>    
 
                     <div class="search-bar" style="float:right">
                         <form action="/admin/jurusan">
@@ -75,11 +76,7 @@ actived
                             </tbody>
                         </table>
 
-                        <div class="paginate-container mb-2 ">
-                            <div class="pagination justify-content-center mt-4">
-                                {{$jurusan -> links()}}
-                            </div>
-                        </div>
+         
                 </div>
                 </div>
             </div>

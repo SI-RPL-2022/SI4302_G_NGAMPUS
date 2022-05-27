@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Models\Jurusan;
 
 class JurusanController extends Controller
 {
+    public function jurusanAdmin ()
+    {
+        $jurusan=Jurusan::all();
+    return view('adminjurusan.index', compact('jurusan'));
+    }
+    
 
     // public function __construct()
     // {
