@@ -12,6 +12,8 @@ use App\Http\Controllers\ViewDataController;
 
 use App\Http\Controllers\ArtikelController;
 
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,13 @@ use App\Http\Controllers\ArtikelController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//admin section
+Route::get('/admin/kampus', [AdminController::class, 'indexKampus'])->name('admin.kampus.index');
+Route::get('/admin/kampus/create', [AdminController::class, 'createKampus'])->name('admin.kampus.create');
+Route::post('/admin/kampus/store', [AdminController::class, 'storeKampus'])->name('admin.kampus.store');
+Route::post('/admin/kampus/{id}/delete', [AdminController::class, 'destroyKampus'])->name('admin.kampus.delete');
+
 
 //product controller
 Route::get('/admin/produk', [ProductController::class, 'productAdmin']);
