@@ -12,6 +12,8 @@ use App\Http\Controllers\ViewDataController;
 
 use App\Http\Controllers\ArtikelController;
 
+use App\Http\Controllers\FaqController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +37,14 @@ Route::post('/admin/produk/{product}/delete', [ProductController::class, 'destro
 Route::get('/', [ViewDataController::class, 'index']);
 Route::get('/produk', [ViewDataController::class, 'indexProduct']);
 Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
+
+//faq ngampus
+Route::get('/admin/faq', [FaqController::class, 'faqAdmin']);
+Route::get('/admin/faq/tambah', [FaqController::class, 'create']);
+Route::post('/admin/faq', [FaqController::class, 'store']);
+Route::get('/admin/faq/{faq}/edit', [FaqController::class, 'edit']);
+Route::post('/admin/faq/{faq}', [FaqController::class, 'update']);
+Route::post('/admin/faq/{faq}/delete', [FaqController::class, 'destroy']);
 
 //testimoni produk
 Route::get('/admin/testimoni/produk', [ViewDataController::class, 'testimoniIndex']);
@@ -93,6 +103,7 @@ Route::get('/detailproduk', function () {
     return view('produk.detailproduk', [
         "title" => 'contact',
     ]);
+
 });
 
 
@@ -104,5 +115,3 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-
-
