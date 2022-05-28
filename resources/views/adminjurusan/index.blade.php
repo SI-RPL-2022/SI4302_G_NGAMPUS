@@ -1,93 +1,87 @@
 @extends('layouts.admin')
 
-@section ('manajemenjurusan')
+@section('jurusan')
 actived
 @endsection
+
 
 @section('konten')
 
 <main id="main" class="main">
     <div class="pagetitle">
         <h1>Manajemen Jurusan</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Beranda</a></li>
-                    <li class="breadcrumb-item active">Manajemen Jurusan</li>
-                </ol>
-            </nav>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin">Beranda</a></li>
+                <li class="breadcrumb-item active">Manajemen Jurusan</li>
+            </ol>
+        </nav>
     </div>
-<!-- End Page Title -->
+    <!-- End Page Title -->
 
-<!-- tabel -->
-    <div class="content">
+    <!-- dashboard -->
+    <section class="section dashboard">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header pt-3">
-                    <p class="fw-bolder mt-2" style="float:left; font-size:15px;">List Jurusan</p>
-                    <a href="/admin/jurusan/tambah" style="font-size:13px; float:right;" class=" rounded-pill btn-secondary btn">
-                    <i class="bi bi-plus-square me-1 "></i> Tambah Jurusan</button></a>    
 
-                    <div class="search-bar" style="float:right">
-                        <form action="/admin/jurusan">
-                        <input type="text" name="search" style="height=20px;" class="form-control rounded" placeholder="Cari Nama Jurusan Disini" aria-label="Search" aria-describedby="search-addon" value="{{request('search')}}"/>
-                        </form>
-        </div>
-                        
-                    </div>
-                <div class="card-body">
-                    
-                    <div class="table-responsive ">
-                        <table class="table">
-                            <thead style="color:#00B5BF">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Nama Jurusan</th>
-                                <th scope="col">Deskripsi Jurusan</th>
-                                <th scope="col">Alasan Memilih Jurusan</th>
-                                <th scope="col">Alasan Memilih Jurusan</th>
-                                <th scope="col">Alasan Memilih Jurusan</th>
-                                <th scope="col">Alasan Memilih Jurusan</th>
-                                <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Prospek Kerja</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                            </thead>
+            <!-- Left side columns -->
+            <div class="col">
+                <div class="row">
+                    <!-- tabel -->
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header pt-3">
+                                        <p class="fw-bolder mt-2" style="float:left; font-size:15px;">List Jurusan</p>
+                                        <a href="/admin/jurusan/tambah" style="font-size:13px; float:right;"
+                                            class=" rounded-pill btn-secondary btn">
+                                            <i class="bi bi-plus-square me-1 "></i> Tambah Jurusan</button></a>
 
-                            <tbody>
-
-                            @foreach($jurusan as $key=> $item)
-                            
-                            <tr>
-                                <td >{{ $jurusan->firstItem() + $key }}</td>
-                                <td >{{ $item->name }}</td>
-                                <td><img src="{{asset('Admin/img/'.$item->picture.'')}}" width="50" alt="Profile" class="rounded-circle"></td>
-                                <td >
-                                <div class="d-flex flex-row bd-highlight">
-                                    <a href="/admin/jurusan/{{$item->id}}/detail" class="btn btn-detail rounded-pill">Detail</a>
-                                    <form action="/admin/jurusan/{{$item->id}}/delete" method="POST">  
-                                    @csrf  
-                                        <button type="submit" class="btn btn-hapus rounded-pill ms-2">Delete</button>
-                                    </form> 
                                     </div>
-                                </td>
-                            </tr>
-                            
+                                    <div class="card-body">
 
-                            @endforeach
-                            
-                            </tbody>
-                        </table>
+                                        <div class="table-responsive ">
+                                            <table class="table text-center">
+                                                <thead style="color:#00B5BF">
+                                                    <tr>
 
-         
-                </div>
-                </div>
-            </div>
+                                                        <th scope="col" style="width: 2rem">No</th>
+                                                        <th scope="col" style="width: 10rem">Nama Jurusan</th>
+                                                        <th scope="col" style="width: 80rem">Deskripsi</th>
+                                                        <th scope="col" style="width: 10rem">Aksi</th>
+                                                    </tr>
+                                                </thead>
 
-                
+                                                <tbody>
+                                                    @foreach($jurusans as $key=> $item)
 
-@endsection
+                                                        <tr>
+                                                            <th>{{ $loop->iteration }}</th>
+                                                            <td>{{ $item->nama_jurusan }}</td>
+                                                            <td class="crop-text-4 text-justify my-auto py-1">{{ $item->desc_jurusan }}</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row bd-highlight">
+
+                                                                <div class="d-flex flex-row bd-highlight">
+                                                                    <a href="/admin/jurusan/{{ $item->id }}/edit"
+                                                                        class="btn btn-detail rounded-pill ms-2">Edit</a>
+                                                                    <form
+                                                                        action="/admin/jurusan/{{ $item->id }}/delete"
+                                                                        method="POST">
+                                                                        @csrf
+                                                                        <button type="submit"
+                                                                            class="btn btn-hapus rounded-pill ms-2">Delete</button>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                @endsection

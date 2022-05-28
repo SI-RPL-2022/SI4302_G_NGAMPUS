@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section ('manajemenjurusan')
-collapsed
+@section ('jurusan')
+actived
 @endsection
 
 @section('konten')
@@ -28,60 +28,60 @@ collapsed
     <form class="pt-4 pb-4" action="/admin/jurusan" method="POST" enctype="multipart/form-data">
         @csrf
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Nama Jurusan</label>
+        <label for="nama_jurusan" class="form-label">Nama Jurusan</label>
         <input type="text" class="form-control" name="nama_jurusan" required>
     </div>
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Deskripsi Jurusan</label>
+        <label for="desc_jurusan" class="form-label">Deskripsi Jurusan</label>
         <input type="text" class="form-control" name="desc_jurusan" required>
     </div>
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Alasan Memilih Jurusan</label>
+        <label for="alasan1" class="form-label">Alasan Memilih Jurusan1</label>
         <input type="text" class="form-control" name="alasan1" required>
     </div>
     
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Alasan Memilih Jurusan</label>
+        <label for="alasan2" class="form-label">Alasan Memilih Jurusan2</label>
         <input type="text" class="form-control" name="alasan2" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Alasan Memilih Jurusan</label>
+        <label for="alasan3" class="form-label">Alasan Memilih Jurusan3</label>
         <input type="text" class="form-control" name="alasan3" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Alasan Memilih Jurusan</label>
+        <label for="alasan4" class="form-label">Alasan Memilih Jurusan4</label>
         <input type="text" class="form-control" name="alasan4" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Alasan Memilih Jurusan</label>
+        <label for="prospek1" class="form-label">Prospek Kerja1</label>
         <input type="text" class="form-control" name="prospek1" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <label for="prospek2" class="form-label">Prospek Kerja2</label>
         <input type="text" class="form-control" name="prospek2" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <label for="prospek3" class="form-label">Prospek Kerja3</label>
         <input type="text" class="form-control" name="prospek3" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <label for="prospek4" class="form-label">Prospek Kerja4</label>
         <input type="text" class="form-control" name="prospek4" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <label for="prospek5" class="form-label">Prospek Kerja5</label>
         <input type="text" class="form-control" name="prospek5" required>
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputFile" class="form-label">Prospek Kerja</label>
+        <label for="prospek6" class="form-label">Prospek Kerja6</label>
         <input type="text" class="form-control" name="prospek6" required>
     </div>
     
