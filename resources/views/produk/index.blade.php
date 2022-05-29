@@ -37,7 +37,7 @@ active
                     </div>
                     <div class="card-footer">
                         <center>
-                            <a type="button" href="/produk/detail/{{ $kj }}" class="btn" style="background-color:#09D2DD; color:white ; border-radius: 50px">See details</a></center>
+                            <a type="button" href="/produk/{{ $kj }}" class="btn" style="background-color:#09D2DD; color:white ; border-radius: 50px">See details</a></center>
                     </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ active
                     </div>
                     <div class="card-footer">
                         <center>
-                            <a type="button" href="/produk/detail/{{ $me }}" class="btn" style="background-color:#09D2DD; color:white ; border-radius: 50px">See details</a></center>
+                            <a type="button" href="/produk/{{ $me }}" class="btn" style="background-color:#09D2DD; color:white ; border-radius: 50px">See details</a></center>
                     </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ active
                     </div>
                     <div class="card-footer">
                         <center>
-                            <a type="button" href="/produk/detail/{{ $webinar }}" class="btn" style="background-color:#09D2DD; color:white ; border-radius: 50px">See details</a></center>
+                            <a type="button" href="/produk/{{ $webinar }}" class="btn" style="background-color:#09D2DD; color:white ; border-radius: 50px">See details</a></center>
                     </div>
                     </div>
                 </div>

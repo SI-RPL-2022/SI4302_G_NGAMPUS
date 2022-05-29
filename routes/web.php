@@ -12,6 +12,8 @@ use App\Http\Controllers\ViewDataController;
 
 use App\Http\Controllers\ArtikelController;
 
+use App\Http\Controllers\DaftarController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,19 +36,21 @@ Route::post('/admin/produk/{product}/delete', [ProductController::class, 'destro
 //produk user
 Route::get('/', [ViewDataController::class, 'index']);
 Route::get('/produk', [ViewDataController::class, 'indexProduct']);
-Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
+Route::get('/produk/{id}', [ViewDataController::class, 'indexProduct']);
+
 //registrasi produk
-Route::get('/registrasi', function () {
-    return view('produk.formregistrasi', [
-        "title" => 'registrasi',
-    ]);
-});
+Route::get('/produk/daftar/{id}', [DaftarController::class, 'registrasi']);
+Route::post('/produk', [DaftarController::class, 'kegiatan'])->name('daftar');
+Route::post('/kegiatanku/{id}', [DaftarController::class, 'kegiatan'])->name('daftar');
+Route::get('/kegiatanku/{id}', [DaftarController::class, 'kegiatanIndex']);
+
+
 
 //testimoni produk
 Route::get('/admin/testimoni/produk', [ViewDataController::class, 'testimoniIndex']);
 Route::get('/admin/testimoni/produk/show/{id}', [ViewDataController::class, 'testimoniShow']);
 Route::get('/admin/testimoni/produk/hide/{id}', [ViewDataController::class, 'testimoniHide']);
-Route::get('/produk/detail/{id}', [ViewDataController::class, 'indexProduct']);
+Route::get('/produk/{id}', [ViewDataController::class, 'indexProduct']);
 
 //artikel info kampus
 route::get('/artikel', [ArtikelController::class, 'index']);

@@ -83,9 +83,15 @@ active
                       <p class="card-text mx-auto" style="font-size:12px">Waktu Pelaksanaan: {{ $key->tanggal }}</p></h7>
 
                     </div>
+                    @guest
                     <div class="card-footer">
-                        <center><button type="button" href="#" class="btn" style="background-color:#09D2DD; color:white; border-radius: 50px ">Daftar</button></center>
+                        <center><a type="button" href="/login" class="btn" style="background-color:#09D2DD; color:white; border-radius: 50px ">Daftar</a></center>
                     </div>
+                    @else
+                    <div class="card-footer">
+                        <center><a type="button" href="/produk/daftar/{{$key->id}}" class="btn" style="background-color:#09D2DD; color:white; border-radius: 50px ">Daftar</a></center>
+                    </div>
+                    @endguest
                     </div>
                 </div>
                 @endforeach
