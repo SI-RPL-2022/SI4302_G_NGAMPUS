@@ -20,6 +20,8 @@ use App\Http\Controllers\DaftarController;
 
 use App\Http\Controllers\FaqController;
 
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,6 +48,15 @@ Route::post('/admin/jurusan', [JurusanController::class, 'store']);
 Route::get('/admin/jurusan/{jurusan}/edit', [JurusanController::class, 'edit']);
 Route::post('/admin/jurusan/{jurusan}', [JurusanController::class, 'update']);
 Route::post('/admin/jurusan/{jurusan}/delete', [JurusanController::class, 'destroy']);
+
+//admin section
+Route::get('/admin/kampus', [AdminController::class, 'indexKampus'])->name('admin.kampus.index');
+Route::get('/admin/kampus/create', [AdminController::class, 'createKampus'])->name('admin.kampus.create');
+Route::post('/admin/kampus/store', [AdminController::class, 'storeKampus'])->name('admin.kampus.store');
+Route::post('/admin/kampus/{id}/update', [AdminController::class, 'updateKampus'])->name('admin.kampus.update');
+Route::post('/admin/kampus/{id}/delete', [AdminController::class, 'destroyKampus'])->name('admin.kampus.delete');
+Route::get('/admin/kampus/{id}/edit', [AdminController::class, 'editKampus'])->name('admin.kampus.edit');
+
 
 //product controller
 Route::get('/admin/produk', [ProductController::class, 'productAdmin']);

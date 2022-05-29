@@ -183,7 +183,7 @@
             <!-- End Contact Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('kampus')" href="">
+                <a class="nav-link @yield('kampus')" href="{{ route('admin.kampus.index') }}">
                     <i class="bi bi-mortarboard"></i>
                     <span>Kampus</span>
                 </a>
