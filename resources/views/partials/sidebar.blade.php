@@ -198,6 +198,13 @@
             </li>
             <!-- End Login Page Nav -->
 
+            <li class="nav-item">
+                <a class="nav-link @yield('faq')" href="/admin/faq">
+                    <i class="bi bi-question-octagon"></i>
+                    <span>FAQ Ngampus</span>
+                </a>
+            </li>
+            <!-- End Login Page Nav -->
         </ul>
     </aside>
 <!-- End Sidebar-->
