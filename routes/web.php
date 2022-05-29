@@ -36,9 +36,8 @@ use App\Http\Controllers\AdminController;
 //manajemen user controller
 Route::get('/admin/user', [UserController::class, 'userAdmin']);
 Route::get('/admin/user/tambah', [UserController::class, 'create']);
-Route::post('/admin/user', [UserController::class, 'store']);
+Route::post('/admin/user', [UserController::class, 'edit']);
 Route::get('/admin/user/{user}/detail', [UserController::class, 'detail']);
-Route::post('/admin/user/{user}', [UserController::class, 'update']);
 Route::post('/admin/user/{user}/delete', [UserController::class, 'destroy']);
 
 //manajemen jurusan controller
@@ -85,6 +84,9 @@ Route::post('/admin/faq', [FaqController::class, 'store']);
 Route::get('/admin/faq/{faq}/edit', [FaqController::class, 'edit']);
 Route::post('/admin/faq/{faq}', [FaqController::class, 'update']);
 Route::post('/admin/faq/{faq}/delete', [FaqController::class, 'destroy']);
+
+// FAQ
+Route::get('/produk/{id}', [ViewDataController::class, 'faqIndex']);
 
 //testimoni produk
 Route::get('/admin/testimoni/produk', [ViewDataController::class, 'testimoniIndex']);

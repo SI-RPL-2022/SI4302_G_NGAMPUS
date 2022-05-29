@@ -6,12 +6,10 @@ active
 <div class="container">
     <div class="row pb-5">
       <div class="col-6">
-        <h1 class="text-light">Kepo Jurusan</h1>
       </div>
     </div>
     <div class="row pb-5">
       <div class="col-6">
-        <p class="text-light">Kepo Jurusan akan membantu kamu untuk menentukan jurusan impianmu, yuk daftarkan dirimu segera!</p>
       </div>
     </div>
 </div>
@@ -21,7 +19,7 @@ active
     <div class="shadow p-3 mb-5 bg-body rounded">
         <div class="mx-auto">
             
-            <h2 class="ps-4 mt-2" style="color:#666666">Kepo Jurusan : {{ $list_produk ['namaproduct'] }}</h2>
+            <h2 class="ps-4 mt-2" style="color:#666666">Daftar: {{ $list_produk ['namaproduct'] }}</h2>
 
             <div class="row row-cols g-4">
 

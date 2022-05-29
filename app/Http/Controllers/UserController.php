@@ -24,12 +24,19 @@ class UserController extends Controller
 
         return view('adminuser.index', compact('user'));
     }
-
-
+    
     public function detail($id)
     {
-        $user = User::find($id);
+        $user = user::find($id);
         return view('adminuser.detail', compact('user'));
+    }
+
+    public function edit(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->password = $request->password;
+        $user->save();
+        return redirect('/admin/user');
     }
 
     public function destroy($id)

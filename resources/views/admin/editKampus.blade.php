@@ -41,8 +41,8 @@ collapsed
         <input type="text" class="form-control" name="biaya" value="{{ $kampuses->biaya }}" required>
     </div>
     <div class="mb-3">
-        <label for="picture" class="form-label">Picture</label>
-        <input type="file" class="form-control" name="picture" required>
+        <label for="picture" class="form-label">Picture : {{ $kampuses->picture }}</label>
+        <input type="file" class="form-control" name="picture" value="{{ $kampuses->picture }}">
     </div>
     <div class="mb-3">
         <label for="fakultas1" class="form-label">Fakultas 1</label>

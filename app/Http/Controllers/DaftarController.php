@@ -40,6 +40,7 @@ class DaftarController extends Controller
             'alasan' => $request['alasan'],
             'status' => $request['status'],
         ]);
+        
         return view('produk.index', compact('daftar'));
     }
 
