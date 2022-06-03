@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section ('kampus')
-collapsed
+@section('kampus')
+actived
 @endsection
 
 @section('konten')

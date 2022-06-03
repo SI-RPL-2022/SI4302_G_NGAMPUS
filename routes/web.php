@@ -36,8 +36,10 @@ use App\Http\Controllers\AdminController;
 //manajemen user controller
 Route::get('/admin/user', [UserController::class, 'userAdmin']);
 Route::get('/admin/user/tambah', [UserController::class, 'create']);
-Route::post('/admin/user', [UserController::class, 'edit']);
+Route::post('/admin/user', [UserController::class, 'store']);
 Route::get('/admin/user/{user}/detail', [UserController::class, 'detail']);
+Route::get('/admin/user/{user}/edit', [UserController::class, 'edit']);
+Route::post('/admin/user/{user}', [UserController::class, 'update']);
 Route::post('/admin/user/{user}/delete', [UserController::class, 'destroy']);
 
 //manajemen jurusan controller

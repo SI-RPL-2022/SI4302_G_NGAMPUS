@@ -7,11 +7,11 @@ actived
 @section('konten')
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Edit Produk</h1>
+        <h1>Detail User</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/produk">Manajemen User</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/user">Manajemen User</a></li>
                     <li class="breadcrumb-item active">Detail User</li>
                 </ol>
             </nav>
@@ -24,9 +24,7 @@ actived
             <div class="card">
             <div class="card-header pt-3">
                     <p class="fw-bolder mt-2" style="float:left; font-size:15px;">Detail User</p>
-                    
-                    <!-- <a href="/admin/produk/tambah" style="font-size:13px; float:right;" class=" rounded-pill btn-secondary btn">
-                        <i class="bi bi-plus-square me-1 "></i> Tambah Produk</button></a>  -->
+
                         
                     </div>
             <div class="card-body">
@@ -34,7 +32,7 @@ actived
             
 
     <div class="container">
-    <form class="pt-4 pb-4" action="/admin/produk/{{$user->id}}" method="POST" enctype="multipart/form-data">
+    <form>
         @csrf
 
         <form>
@@ -109,6 +107,13 @@ actived
                         <div class="col-lg-3 col-md-4 label ">kelas/Jurusan</div>
                         <div class="col-lg-9 col-md-8">: {{ $user->kelas }}, {{ $user->jurusan }}</div>
                     </div>
+
+                    
+                    <div class="mb-3" style="float:right;">
+                        <a href="/admin/user/{{$user->id}}/edit" class="btn btn-detail rounded-pill ms-2">Edit User</a>
+                    </div>
+
+
 
 
                 </div>
