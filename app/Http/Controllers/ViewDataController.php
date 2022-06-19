@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\User;
 use App\Models\TestimoniProduk;
+use App\Models\Faq;
 use Illuminate\Support\Facades\Hash;
 
 class ViewDataController extends Controller
@@ -22,7 +23,8 @@ class ViewDataController extends Controller
         $product = Product::where('jenisproduct', $id)->paginate(6);
         $testimoniproduk = TestimoniProduk::where('jenisproduct', $id)->paginate(6);
         $jenisproduct = $id;
-        return view('produk.detailproduk', compact('product', 'jenisproduct', 'testimoniproduk'));
+        $faq = Faq::all();
+        return view('produk.detailproduk', compact('product', 'jenisproduct', 'testimoniproduk', 'faq'));
     }
 
 // testimoni produk

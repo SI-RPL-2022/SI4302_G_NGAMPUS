@@ -39,7 +39,6 @@ h6 {
     font-family: "Montserrat", sans-serif;
 }
 
-
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
@@ -1366,4 +1365,28 @@ h6 {
     text-align: center;
     font-size: 13px;
     color: #9FA2B4;
+}
+
+/*--------------------------------------------------------------
+# Additional
+--------------------------------------------------------------*/
+
+.crop-text-4 {
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.crop-text-1 {
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-justify {
+    text-align: justify;
 }

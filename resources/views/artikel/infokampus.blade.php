@@ -18,7 +18,7 @@ active
         
         <div class=" mb-4">
         <center>
-            <img src="{{asset('Admin/img/'.$data_kampus->picture.'')}}" style="width:150px" class="img-fluid rounded-start" alt="...">
+            <img src="{{asset('Admin/img/Kampus/'.$data_kampus->picture.'')}}" style="width:150px" class="img-fluid rounded-start" alt="...">
 
             </div>
             </div>

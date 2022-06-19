@@ -83,9 +83,15 @@ active
                       <p class="card-text mx-auto" style="font-size:12px">Waktu Pelaksanaan: {{ $key->tanggal }}</p></h7>
 
                     </div>
+                    @guest
                     <div class="card-footer">
-                        <center><button type="button" href="#" class="btn" style="background-color:#09D2DD; color:white; border-radius: 50px ">Daftar</button></center>
+                        <center><a type="button" href="/login" class="btn" style="background-color:#09D2DD; color:white; border-radius: 50px ">Daftar</a></center>
                     </div>
+                    @else
+                    <div class="card-footer">
+                        <center><a type="button" href="/produk/daftar/{{$key->id}}" class="btn" style="background-color:#09D2DD; color:white; border-radius: 50px ">Daftar</a></center>
+                    </div>
+                    @endguest
                     </div>
                 </div>
                 @endforeach
@@ -123,17 +129,54 @@ active
                 </div>
             @endif
             @endforeach
+            </div>
+        </div>
 
-                
+    </div>
+</div>
+</div>
 
-                
+<br>
+<br>
 
+
+<div style="border-radius: 100px;">
+  <div class="shadow p-3  bg-body rounded">
+    <div class="mx-auto">
+      <h2 class="ps-4 mt-2" style="color:#666666">FAQ Seputar Produk Ngampus</h2>  
+        <div class="row row-cols p-4 g-4">
+          <div class="accordion " id="accordionExample">
+            @foreach ($faq as $faqs)
+            @if ($faqs->kategori == "Seputar Produk")
+            @csrf
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  {{ $faqs->pertanyaan }}
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  {{ $faqs->jawaban }}
+                  </div>
+                </div>
+              </div>
+              @endif
+            @endforeach
+  
 </div>
 </div>
 
 
-</div>
-</div>
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 

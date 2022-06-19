@@ -99,7 +99,7 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{asset('Admin/img/profile.jpg')}}" alt="Profile" class="rounded-circle">
+                        <img src="{{asset('Admin/img/profile-admin.jpg')}}" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
                     </a>
                     <!-- End Profile Iamge Icon -->
@@ -149,7 +149,7 @@
             <!-- <li class="nav-heading">Pages</li> -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('manajemenuser')" href="">
+                <a class="nav-link @yield('manajemenuser')" href="/admin/user">
                     <i class="bi bi-people"></i>
                     <span>Manajemen Akun</span>
                 </a>
@@ -175,7 +175,7 @@
             <!-- End Register Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('jurusan')" href="">
+                <a class="nav-link @yield('jurusan')" href="/admin/jurusan">
                     <i class="bi bi-book"></i>
                     <span>Jurusan</span>
                 </a>
@@ -183,7 +183,7 @@
             <!-- End Contact Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('kampus')" href="">
+                <a class="nav-link @yield('kampus')" href="{{ route('admin.kampus.index') }}">
                     <i class="bi bi-mortarboard"></i>
                     <span>Kampus</span>
                 </a>
@@ -198,6 +198,13 @@
             </li>
             <!-- End Login Page Nav -->
 
+            <li class="nav-item">
+                <a class="nav-link @yield('faq')" href="/admin/faq">
+                    <i class="bi bi-question-octagon"></i>
+                    <span>FAQ Ngampus</span>
+                </a>
+            </li>
+            <!-- End Login Page Nav -->
         </ul>
     </aside>
 <!-- End Sidebar-->

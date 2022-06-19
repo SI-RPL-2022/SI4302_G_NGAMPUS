@@ -39,7 +39,10 @@ class ProductController extends Controller
         $Product = Product::create([
             'namaproduct' => $request['namaproduct'],
             'jenisproduct' => $request['jenisproduct'],
+            'penyelenggara' => $request['penyelenggara'],
+            'kuota' => $request['kuota'],
             'tanggal' => $request['tanggal'],
+            'lokasi' =>$request['lokasi'],
             'desc' => $request['desc'],
             'picture' => $pictureName,
         ]);
@@ -61,7 +64,10 @@ class ProductController extends Controller
 
         $Product->namaproduct = $request->namaproduct;
         $Product->jenisproduct = $request->jenisproduct;
+        $Product->penyelenggara = $request->penyelenggara;
+        $Product->kuota = $request->kuota;
         $Product->tanggal = $request->tanggal;
+        $Product->lokasi = $request->lokasi;
         $Product->desc = $request->desc;
         $Product->picture = $pictureName;
         $Product->save();
