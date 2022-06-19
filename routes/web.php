@@ -78,6 +78,13 @@ Route::post('/produk', [DaftarController::class, 'kegiatan'])->name('daftar');
 Route::post('/kegiatanku/{id}', [DaftarController::class, 'kegiatan'])->name('daftar');
 Route::get('/kegiatanku/{id}', [DaftarController::class, 'kegiatanIndex']);
 
+//approval kegiatan
+Route::get('/admin/approval', [ApprovalController::class, 'faqAdmin']);
+Route::get('/admin/approval/tambah', [approvalController::class, 'create']);
+Route::post('/admin/approval', [approvalController::class, 'store']);
+Route::get('/admin/approval/{faq}/edit', [approvalController::class, 'edit']);
+Route::post('/admin/approval/{faq}', [approvalController::class, 'update']);
+Route::post('/admin/approval/{faq}/delete', [approvalController::class, 'destroy']);
 
 //faq ngampus
 Route::get('/admin/faq', [FaqController::class, 'faqAdmin']);
