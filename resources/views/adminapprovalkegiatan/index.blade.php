@@ -26,7 +26,7 @@ actived
             <!-- Left side columns -->
             <div class="col">
                 <div class="row">
-                    <!-- Total Produk Card-->
+                    <!-- Total Card-->
                     <div class="col-xxl-4 col-md-3">
                         <div class="card info-card total-card">
 
@@ -36,6 +36,31 @@ actived
 
                                 <div class="ps-3 pb-2 ">
                                     <h6 style="color:#00B5BF">{{ $jumlah }}</h6>
+                                    <h5 class="card-title">total</h5>
+                                </div>
+                                <div class="filter p-3">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-cart"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Total  Card -->
+
+
+                <!-- applied Card-->
+                <div class="col-xxl-4 col-md-3">
+                        <div class="card info-card total-card">
+
+                            <div class="card-body">
+                                
+                                <div class="d-flex align-items-center pt-3">
+
+                                <div class="ps-3 pb-2 ">
+                                    <h6 style="color:#00B5BF">{{ $applied }}</h6>
                                     <h5 class="card-title">applied</h5>
                                 </div>
                                 <div class="filter p-3">
@@ -48,9 +73,10 @@ actived
                         </div>
                     </div>
                 </div>
-                <!-- End Total Produk Card -->
+                <!-- End applied Card -->
 
-                <!-- Kepo Jurusan Card -->
+
+                <!-- approved Card -->
                 <div class="col-xxl-4 col-md-3">
                         <div class="card info-card approved-card">
 
@@ -72,9 +98,9 @@ actived
                         </div>
                     </div>
                 </div>
-                <!-- End Kepo Jurusan Card -->
+                <!-- End approved Card -->
 
-                <!-- Major Experience Card -->
+                <!-- Rejected Card -->
                 <div class="col-xxl-4 col-md-3">
                         <div class="card info-card rejected-card">
 
@@ -96,7 +122,7 @@ actived
                         </div>
                     </div>
                 </div>
-                <!-- End Major Experience Card -->
+                <!-- End Rejected Card -->
 
 
                     <!-- tabel -->
