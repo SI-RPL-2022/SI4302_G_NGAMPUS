@@ -74,6 +74,13 @@ Route::get('/', function () {
     ]);
 });
 
+//About Us
+Route::get('/about', function () {
+    return view('AboutUs', [
+        "title" => "ABout Us",
+    ]);
+});
+
 
 Route::get('/tentang', function () {
     return view('tentang', [
