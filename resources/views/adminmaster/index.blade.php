@@ -8,11 +8,11 @@ actived
 
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Manajemen FAQ Ngampus</h1>
+        <h1>Manajemen Master Ngampus</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin">Beranda</a></li>
-                    <li class="breadcrumb-item active">Manajemen FAQ</li>
+                    <li class="breadcrumb-item active">Manajemen Master</li>
                 </ol>
             </nav>
     </div>
@@ -31,11 +31,6 @@ actived
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header pt-3">
-                    <p class="fw-bolder mt-2" style="float:left; font-size:15px;">List FAQ</p>
-                    <a href="/admin/faq/tambah" style="font-size:13px; float:right;" class=" rounded-pill btn-secondary btn">
-                        <i class="bi bi-plus-square me-1 "></i> Tambah FAQ</button></a> 
-                        
-                    </div>
                 <div class="card-body">
                     
                     <div class="table-responsive ">

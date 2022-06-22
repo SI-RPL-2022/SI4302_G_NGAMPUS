@@ -34,7 +34,7 @@ active
     </div>
     <div class="col-8">
       <h3 class="fw-bold pb-4">{{ $item -> jenis }}</h3>
-      <p style="font-size:20px;" class="fs-4  text-muted">Kepo Jurusan akan membawa pembahasan seputar pengenalan dunia perkuliahan mulai dari mata kuliah apa saja yang dipelajari, skill apa saja yang di kembangkan, prospek karir, dll . So tunggu apalagii yuk buruan daftarkan diri dengan klik tombol daftar dibawah karena slot peserta snagat terbatas </p>
+      <p style="font-size:20px;" class="fs-4  text-muted">{{ $item -> keterangan }}</p>
     </div>
     @endforeach
   </div>
