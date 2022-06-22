@@ -102,12 +102,20 @@ route::get('/artikel/direktori/kampus/{id}', [ArtikelController::class, 'indexKa
 
 route::get('/artikel/direktori/jurusan/{id}', [ArtikelController::class, 'indexJurusan'])->name('jurusan');
 
+//profile
+Route::get('/profile/{id}', [ViewDataController::class, 'indexProfile']);
+Route::post('/profile/{id}/update', [ViewDataController::class, 'updateProfile'])->name('profileUpdate');
+
 //home
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
     ]);
 });
+
+//About Us
+Route::get('/about', [ViewDataController::class, 'indexAboutUs']);
+
 
 
 Route::get('/tentang', function () {
@@ -157,3 +165,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('admin/home/{id}', [HomeController::class, 'adminDetailHome'])->middleware('is_admin');
