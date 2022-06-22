@@ -8,6 +8,7 @@ use App\Models\jurusan;
 use App\Models\kampus;
 use App\Models\Product;
 use App\Models\Daftar;
+use App\Models\Home;
 
 class HomeController extends Controller
 {
@@ -85,4 +86,9 @@ class HomeController extends Controller
 
 
     
+    public function homeIndex()
+    {
+        $product = Home::all();
+        return view('home', compact('product'));
+    }
 }

@@ -58,7 +58,7 @@ actived
                                 <a href='/admin/testimoni/produk/hide/{{ $key->id }}' type="button" class="btn btn-detail" >Hide</a>
                                 @endif
                             </div>
-                        </td>
+                            </td>
                             </tr>
                             
 

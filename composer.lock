@@ -561,6 +561,7 @@
         },
         {
             "name": "guzzlehttp/guzzle",
+<<<<<<< HEAD
             "version": "7.4.5",
             "source": {
                 "type": "git",
@@ -571,6 +572,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
                 "reference": "1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
+=======
+            "version": "7.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "74a8602c6faec9ef74b7a9391ac82c5e65b1cdab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/74a8602c6faec9ef74b7a9391ac82c5e65b1cdab",
+                "reference": "74a8602c6faec9ef74b7a9391ac82c5e65b1cdab",
+>>>>>>> origin/S3_Home
                 "shasum": ""
             },
             "require": {
@@ -665,7 +678,11 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/guzzle/guzzle/tree/7.4.5"
+=======
+                "source": "https://github.com/guzzle/guzzle/tree/7.4.3"
+>>>>>>> origin/S3_Home
             },
             "funding": [
                 {
@@ -681,7 +698,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-06-20T22:16:13+00:00"
+=======
+            "time": "2022-05-25T13:24:33+00:00"
+>>>>>>> origin/S3_Home
         },
         {
             "name": "guzzlehttp/promises",
@@ -884,7 +905,23 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v8.83.17",
+=======
+<<<<<<< HEAD
+            "version": "v8.83.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "141cf126f1746c7264f59aa78c923a84eaab501e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/141cf126f1746c7264f59aa78c923a84eaab501e",
+                "reference": "141cf126f1746c7264f59aa78c923a84eaab501e",
+=======
+            "version": "v8.83.13",
+>>>>>>> origin/S3_Home
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
@@ -892,8 +929,14 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/framework/zipball/2cf142cd5100b02da248acad3988bdaba5635e16",
                 "reference": "2cf142cd5100b02da248acad3988bdaba5635e16",
+=======
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1eed68ec70c98d1a7a6f0fcedbea10cb6dd69a20",
+                "reference": "1eed68ec70c98d1a7a6f0fcedbea10cb6dd69a20",
+>>>>>>> fad97bfa0f6e6e8b9974859c2cb0862b4a07c199
+>>>>>>> origin/S3_Home
                 "shasum": ""
             },
             "require": {
@@ -1053,7 +1096,15 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2022-06-21T14:38:31+00:00"
+=======
+<<<<<<< HEAD
+            "time": "2022-05-24T14:04:02+00:00"
+=======
+            "time": "2022-05-17T14:08:01+00:00"
+>>>>>>> fad97bfa0f6e6e8b9974859c2cb0862b4a07c199
+>>>>>>> origin/S3_Home
         },
         {
             "name": "laravel/sanctum",
@@ -5600,7 +5651,23 @@
         },
         {
             "name": "laravel/sail",
+<<<<<<< HEAD
             "version": "v1.14.11",
+=======
+<<<<<<< HEAD
+            "version": "v1.14.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "c049316f9bcb02598607307f18b514b66202b639"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/c049316f9bcb02598607307f18b514b66202b639",
+                "reference": "c049316f9bcb02598607307f18b514b66202b639",
+=======
+            "version": "v1.14.6",
+>>>>>>> origin/S3_Home
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
@@ -5608,8 +5675,14 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/sail/zipball/6edf45a247b3688e0d07e149570a62fd9bc11c73",
                 "reference": "6edf45a247b3688e0d07e149570a62fd9bc11c73",
+=======
+                "url": "https://api.github.com/repos/laravel/sail/zipball/f00f3a8f83e71436d473cda7700ae7b4b68d26cc",
+                "reference": "f00f3a8f83e71436d473cda7700ae7b4b68d26cc",
+>>>>>>> fad97bfa0f6e6e8b9974859c2cb0862b4a07c199
+>>>>>>> origin/S3_Home
                 "shasum": ""
             },
             "require": {
@@ -5656,7 +5729,15 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
+<<<<<<< HEAD
             "time": "2022-06-13T18:32:48+00:00"
+=======
+<<<<<<< HEAD
+            "time": "2022-05-21T17:14:14+00:00"
+=======
+            "time": "2022-05-18T15:56:59+00:00"
+>>>>>>> fad97bfa0f6e6e8b9974859c2cb0862b4a07c199
+>>>>>>> origin/S3_Home
         },
         {
             "name": "mockery/mockery",

@@ -33,6 +33,11 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+//admin home
+Route::get('/admin/home', [HomeController::class, 'homeAdmin']);
+Route::get('/admin/home/show/{id}', [HomeController::class, 'adminShow']);
+Route::get('/admin/home/hide/{id}', [HomeController::class, 'adminHide']);
+
 //manajemen user controller
 Route::get('/admin/user', [UserController::class, 'userAdmin']);
 Route::get('/admin/user/tambah', [UserController::class, 'create']);
@@ -142,6 +147,8 @@ Route::get('/kontak', function () {
         "title" => 'kontak',
     ]);
 });
+
+Route::get('/home', [HomeController::class, 'homeIndex']);
 
 //master produk
 Route::get('/admin/masterproduk', function () {
