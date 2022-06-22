@@ -119,11 +119,14 @@ actived
                 <!-- End Total Produk Card -->
 
 
-<div id = statusproduk>
+<div class="row">
+<div class="col-xxl-4 col-md-6" id = statusproduk>
 </div>
 
-<div id = jenisproduk>
+<div class="col-xxl-4 col-md-6" id = jenisproduk>
 </div>
+</div>
+
 
 
 
@@ -139,7 +142,6 @@ actived
                         <table class="table">
                             <thead style="color:#00B5BF">
                             <tr>
-                                <th scope="col">No</th>
                                 <th scope="col">ID Registrasi</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Nomor Telepon</th>
@@ -153,7 +155,6 @@ actived
                             @foreach($daftar as $key=> $item)
                             
                             <tr>
-                                <th ></th>
                                 <td >{{ $item->id }}</td>
                                 <td >{{ $item->name }}</td>
                                 <td >{{ $item->no_telp }}</td>
@@ -180,7 +181,7 @@ actived
         type: 'pie'
     },
     title: {
-        text: 'Browser market shares in January, 2018'
+        text: 'Persentase Status Registrasi User'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -213,10 +214,7 @@ Highcharts.chart('jenisproduk', {
         type: 'column'
     },
     title: {
-        text: 'Monthly Average Rainfall'
-    },
-    subtitle: {
-        text: 'Source: WorldClimate.com'
+        text: 'Jumlah Produk Tiap Kategori'
     },
     xAxis: {
         categories: [
@@ -229,13 +227,13 @@ Highcharts.chart('jenisproduk', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Rainfall (mm)'
+            text: 'Jumlah Produk'
         }
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true

@@ -22,6 +22,10 @@ use App\Http\Controllers\FaqController;
 
 use App\Http\Controllers\AdminController;
 
+use App\Http\Controllers\MasterController;
+
+use App\Http\Controllers\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -101,6 +105,11 @@ Route::get('/admin/testimoni/produk/show/{id}', [ViewDataController::class, 'tes
 Route::get('/admin/testimoni/produk/hide/{id}', [ViewDataController::class, 'testimoniHide']);
 Route::get('/produk/{id}', [ViewDataController::class, 'indexProduct']);
 
+// master ngampus
+Route::get('/admin/master', [MasterController::class, 'masterIndex']);
+Route::get('/admin/master/{id}', [MasterController::class, 'edit']);
+Route::post('/admin/master/{id}', [MasterController::class, 'update']);
+
 //artikel info kampus
 route::get('/artikel', [ArtikelController::class, 'index']);
 route::get('/artikel/direktori/kampus/{id}', [ArtikelController::class, 'indexKampus'])->name('kampus');
@@ -108,8 +117,9 @@ route::get('/artikel/direktori/kampus/{id}', [ArtikelController::class, 'indexKa
 route::get('/artikel/direktori/jurusan/{id}', [ArtikelController::class, 'indexJurusan'])->name('jurusan');
 
 //profile
-Route::get('/profile/{id}', [ViewDataController::class, 'indexProfile']);
-Route::post('/profile/{id}/update', [ViewDataController::class, 'updateProfile'])->name('profileUpdate');
+Route::get('/profile/{id}', [ProfileController::class, 'index']);
+Route::get('/profile/{id}/update', [ProfileController::class, 'indexUpdate']);
+Route::post('/profile/{id}/update', [ProfileController::class, 'updateProfile'])->name('profileUpdate');
 
 //home
 Route::get('/', function () {
@@ -129,13 +139,13 @@ Route::get('/tentang', function () {
     ]);
 });
 
-
 Route::get('/produk', function () {
     return view('produk.index', [
         "title" => 'produk',
     ]);
 });
 
+ 
 Route::get('/team', function () {
     return view('team', [
         "title" => 'team',
@@ -170,6 +180,10 @@ Route::get('/detailproduk', function () {
 //auth login register
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('admin/home/{id}', [HomeController::class, 'adminDetailHome'])->middleware('is_admin');
+
+Route::get('/admin/approval', [HomeController::class, 'adminApproval']);
+Route::post('admin/approval/update', [HomeController::class, 'adminUpdateHome'])->name('adminUpdate');
+Route::get('admin/approval/{id}', [HomeController::class, 'adminDetailApproval'])->middleware('is_admin');

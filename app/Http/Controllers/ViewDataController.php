@@ -19,6 +19,12 @@ class ViewDataController extends Controller
         return view('Home', compact('product'));
     }
 
+    public function product()
+    {
+        $product = Product::all();
+        return view('produk.detailpr', compact('product'));
+    }
+
 
     public function indexProduct($id)
     {
@@ -39,14 +45,6 @@ class ViewDataController extends Controller
         return view('AboutUs', compact('jumlah_user', 'jumlah_produk', 'jumlah_jurusan', 'jumlah_kampus', 'faq'));
     }
 
-    public function indexHomeAdmin()
-    {
-        $jumlah_user = User::count();
-        $jumlah_produk = Product::count();
-        $jumlah_jurusan = jurusan::count();
-        $jumlah_kampus = kampus::count();
-        return view('AboutUs', compact('jumlah_user', 'jumlah_produk', 'jumlah_jurusan', 'jumlah_kampus'));
-    }
 
 // testimoni produk
     public function testimoniIndex()

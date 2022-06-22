@@ -9,6 +9,7 @@ use App\Models\kampus;
 use App\Models\Product;
 use App\Models\Daftar;
 use App\Models\Home;
+use App\Models\Master;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $master = Master::all();
+        return view('Home', compact('master'));
     }
 
     /**
@@ -84,6 +86,30 @@ class HomeController extends Controller
         return view('adminDetailHome', compact('daftar'));
     }
 
+    public function adminDetailApproval($id)
+    {
+        $daftars = Daftar::all();
+        $daftar = $daftars->intersect(Daftar::whereIn('id', [$id])->get());
+        return view('approvalkegiatan.detail', compact('daftar'));
+    }
+
+    public function adminApproval()
+    {
+        $daftar = Daftar::all();
+        $jumlah_daftar = Daftar::count();
+        $jumlah_applied = Daftar::where('status','Applied')->get()->count();
+        $jumlah_approved = Daftar::where('status','Approved')->get()->count();
+        $jumlah_rejected = Daftar::where('status','Rejected')->get()->count();
+        return view('approvalkegiatan.index', compact('daftar','jumlah_daftar', 'jumlah_applied', 'jumlah_approved', 'jumlah_rejected'));
+    }
+
+    public function adminUpdateHome(Request $request)
+    {
+        $daftar = Daftar::find($request->id);
+        $daftar->status = $request->status;
+        $daftar->save();
+        return redirect('/admin/approval');
+    }
 
     
     public function homeIndex()

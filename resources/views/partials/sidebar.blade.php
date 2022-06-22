@@ -167,7 +167,7 @@
             <!-- End F.A.Q Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link @yield('approvalkegiatan')" href="">
+                <a class="nav-link @yield('approvalkegiatan')" href="/admin/approval">
                     <i class="bi bi-card-list"></i>
                     <span>Approval Kegiatan</span>
                 </a>
@@ -202,6 +202,14 @@
                 <a class="nav-link @yield('faq')" href="/admin/faq">
                     <i class="bi bi-question-octagon"></i>
                     <span>FAQ Ngampus</span>
+                </a>
+            </li>
+            <!-- End Login Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link @yield('master')" href="/admin/master">
+                    <i class="bi bi-question-octagon"></i>
+                    <span>Master Ngampus</span>
                 </a>
             </li>
             <!-- End Login Page Nav -->
