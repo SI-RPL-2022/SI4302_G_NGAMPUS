@@ -31,7 +31,7 @@ actived
     <div class="mb-3">
         <label for="exampleInputText" class="form-label"><strong>Kategori FAQ</strong></label>
         <select class="form-select" aria-label="Default select example" name="kategori">
-        <?php $list=['Umum', 'Seputar Produk']; ?>
+        <?php $list=['Pertanyaan Umum', 'Seputar Produk']; ?>
         @foreach ($list as $key)
             @if ($key ==$faq->kategori )
                 <option value="{{ $faq->kategori }}" selected>{{ $faq->kategori }}</option>

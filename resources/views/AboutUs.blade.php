@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('beranda')
+@section('about')
 active
 @endsection
 @section('content')

@@ -28,9 +28,6 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="data_pribadi" class="form-label">Data Pribadi Kamu</label>
-                    </div>
-                    <div class="mb-3">
                         <label for="name" class="form-label">Nama</label>
                         <input type="text" class="form-control" name="name" value="{{ $user->name }}" required>
                     </div>
@@ -82,7 +79,7 @@
                     </div>
                     <br>
                     <div class="mb-3" style="float:right;">
-                        <button type="submit" class="btn btn-submit rounded-pill ms-2">Submit</button>
+                        <button type="submit" class="btn btn-primary rounded-pill ms-2">Submit</button>
                     </div>
                     </form>
                     </div>
