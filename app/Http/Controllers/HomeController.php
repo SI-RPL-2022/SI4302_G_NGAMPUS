@@ -34,7 +34,7 @@ class HomeController extends Controller
      */
     public function adminHome()
     {
-        $product = Home::paginate(5);
+        $product = Home::paginate(50);
         $jumlah = Home::count();
         $jumlah_kj = Home::where('jenisproduct','Kepo Jurusan')->get()->count();
         $jumlah_majore = Home::where('jenisproduct','Major Experience')->get()->count();
@@ -44,7 +44,7 @@ class HomeController extends Controller
     public function adminShow($id)
     {
         $product = Home::find($id);
-        $product->show = "yes";
+        $product->status = "yes";
         $product->save();
         return redirect('admin/home');
     }
@@ -52,9 +52,14 @@ class HomeController extends Controller
     public function adminHide($id)
     {
         $product = Home::find($id);
-        $product->show = "no";
+        $product->status = "no";
         $product->save();
         return redirect('admin/home');
     }
     
+    public function homeIndex()
+    {
+        $product = Home::all();
+        return view('home', compact('product'));
+    }
 }

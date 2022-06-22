@@ -21,19 +21,29 @@ active
       </div>
     </div>
  </div>
-
- <div class="container mt-5 pt-5">
-  <div class="row align-items-center">
-    <div class="col-12 text-center pb-5">
-      <h2 class="fw-bold">Temukan Layanan Terbaik dari Ngampus Disini</h2>
-    </div>
+ @foreach ($product as $key)
+  <div class="container mt-5 pt-5">
+    <div class="row align-items-center">
+      <div class="col-12 text-center pb-5">
+        <h2 class="fw-bold">Temukan Layanan Terbaik dari Ngampus Disini</h2>
+      </div>
     <div class="col-4">
-      <img src="{{asset('/img/administrasi-bisnis.png')}}" class="img-fluid" alt="...">
+      @csrf
+      <div class="col" style="height: 500px;">
+        <div class="m-4 shadow p-3 mb-5 bg-body rounded">
+          <img src="{{asset('Admin/img/'.$key->picture.'')}}" class="card-img-top" alt="...">
+          <div class="card-body mx-auto">
+          <h7 class="card-title mx-auto" style="font-size:12px"><b>Kepo Jurusan : {{ $key->namaproduct }}</b></h7>
+          <center>
+            <p class="card-text mx-auto" style="font-size:12px">Waktu Pelaksanaan: {{ $key->tanggal }}</p></h7>
+        </div>
+      </div>
     </div>
     <div class="col-8">
       <h3 class="fw-bold pb-4">Kepo Jurusan</h3>
       <p class="fs-4 lh-lg text-muted">Kepo Jurusan akan membawa pembahasan seputar pengenalan dunia perkuliahan mulai dari mata kuliah apa saja yang dipelajari, skill apa saja yang di kembangkan, prospek karir, dll . So tunggu apalagii yuk buruan daftarkan diri dengan klik tombol daftar dibawah karena slot peserta snagat terbatas </p>
     </div>
+
   </div>
   <div class="container">
     <div class="row align-items-center">
@@ -42,10 +52,36 @@ active
         <p class="fs-4 lh-lg text-end text-muted">Major experience akan membawa pembahasan yang lebih dalam seputar dunia perkuliahan seperti para peserta akan merasakan langsung belajar mata kuliah dasar yang di ajarkan di jurusan yang peserta pilih. So tunggu apalagii yuk segera daftarkan diri kalian karena slot peserta snagat terbatas </p>
       </div>
       <div class="col-4">
-        <img src="{{asset('/img/hubungan-internasional.png')}}" class="img-fluid" alt="...">
+        @csrf
+        <div class="col" style="height: 500px;">
+          <div class="m-4 shadow p-3 mb-5 bg-body rounded">
+            <img src="{{asset('Admin/img/'.$key->picture.'')}}" class="card-img-top" alt="...">
+            <div class="card-body mx-auto">
+            <h7 class="card-title mx-auto" style="font-size:12px"><b>Major Experience : {{ $key->namaproduct }}</b></h7>
+            <center>
+              <p class="card-text mx-auto" style="font-size:12px">Waktu Pelaksanaan: {{ $key->tanggal }}</p></h7>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class="col-4">
+      @csrf
+      <div class="col" style="height: 500px;">
+        <div class="m-4 shadow p-3 mb-5 bg-body rounded">
+          <img src="{{asset('Admin/img/'.$key->picture.'')}}" class="card-img-top" alt="...">
+          <div class="card-body mx-auto">
+          <h7 class="card-title mx-auto" style="font-size:12px"><b>Webinar : {{ $key->namaproduct }}</b></h7>
+          <center>
+            <p class="card-text mx-auto" style="font-size:12px">Waktu Pelaksanaan: {{ $key->tanggal }}</p></h7>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <h3 class="fw-bold pb-4">Webinar</h3>
+      <p class="fs-4 lh-lg text-muted">Kepo Jurusan akan membawa pembahasan seputar pengenalan dunia perkuliahan mulai dari mata kuliah apa saja yang dipelajari, skill apa saja yang di kembangkan, prospek karir, dll . So tunggu apalagii yuk buruan daftarkan diri dengan klik tombol daftar dibawah karena slot peserta snagat terbatas </p>
+    </div>
+ @endforeach   
     <div class="container mt-5 pt-5">
       <div class="row">
         <div class="col-12">

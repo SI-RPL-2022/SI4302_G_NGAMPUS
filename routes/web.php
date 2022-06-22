@@ -140,6 +140,8 @@ Route::get('/kontak', function () {
     ]);
 });
 
+Route::get('/home', [HomeController::class, 'homeIndex']);
+
 //master produk
 Route::get('/admin/masterproduk', function () {
     return view('masterproduk.index', [
