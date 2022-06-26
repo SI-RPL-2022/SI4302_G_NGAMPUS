@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section ('manajemenproduk')
-collapsed
+actived
 @endsection
 
 @section('konten')
@@ -31,10 +31,7 @@ collapsed
         <label for="exampleInputText" class="form-label">Nama Produk</label>
         <input type="text" class="form-control" name="namaproduct" required>
     </div>
-    <div class="mb-3">
-        <label for="exampleInputText" class="form-label">Tanggal</label>
-        <input type="date" class="form-control" name="tanggal" required>
-    </div>
+
     <div class="mb-3">
         <label for="exampleInputText" class="form-label">Jenis Produk</label>
         <select class="form-select" aria-label="Default select example" name="jenisproduct">
@@ -42,6 +39,26 @@ collapsed
         <option value="Kepo Jurusan">Kepo Jurusan</option>
         <option value="Major Experience">Major Experience</option>
         </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Tanggal</label>
+        <input type="date" class="form-control" name="tanggal" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Penyelenggara</label>
+        <input type="text" class="form-control" name="penyelenggara" required></input>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Kuota</label>
+        <input type="text" class="form-control" name="kuota" required></input>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Lokasi</label>
+        <input type="text" class="form-control" name="lokasi" required></input>
     </div>
     
     <div class="mb-3">

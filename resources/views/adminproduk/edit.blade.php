@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section ('manajemenproduk')
-collapsed
+actived
 @endsection
 
 @section('konten')
@@ -34,11 +34,6 @@ collapsed
     </div>
 
     <div class="mb-3">
-        <label for="exampleInputText" class="form-label"><strong>Tanggal</strong></label>
-        <input value="{{ $product->tanggal }}" type="date" class="form-control" name="tanggal" required>
-    </div>
-
-    <div class="mb-3">
         <label for="exampleInputText" class="form-label"><strong>Jenis Produk</strong></label>
         <select class="form-select" aria-label="Default select example" name="jenisproduct">
         <?php $list=['Webinar','Kepo Jurusan','Major Experience']; ?>
@@ -50,6 +45,26 @@ collapsed
             @endif
         @endforeach
         </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label"><strong>Tanggal</strong></label>
+        <input value="{{ $product->tanggal }}" type="date" class="form-control" name="tanggal" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Penyelenggara</label>
+        <input type="text" value="{{ $product->penyelenggara }}" class="form-control" name="penyelenggara" required></input>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Kuota</label>
+        <input type="text" value="{{ $product->kuota }}" class="form-control" name="kuota" required></input>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputText" class="form-label">Lokasi</label>
+        <input type="text" value="{{ $product->lokasi }}" class="form-control" name="lokasi" required></input>
     </div>
     
     <div class="mb-3">
